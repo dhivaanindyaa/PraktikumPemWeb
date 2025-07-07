@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Pendaftaran</h2>
+        <form action="proses.php" method="POST" onsubmit="return validasiForm()">
+            <label>Nama:</label>
+            <input type="text" name="nama" id="nama"><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" id="email"><br>
+
+            <label>Password:</label>
+            <input type="password" name="password" id="password"><br>
+
+            <label>Konfirmasi Password:</label>
+            <input type="password" name="konfirmasi" id="konfirmasi"><br>
+
+            <label>Tanggal Lahir:</label>
+            <input type="date" name="tgl_lahir" id="tgl_lahir"><br>
+
+            <label>
+                <input type="checkbox" name="persetujuan" id="persetujuan">
+                <span>Saya menyetujui syarat dan ketentuan</span>
+            </label><br><br>
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+</body>
+</html>
