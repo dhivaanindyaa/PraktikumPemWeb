@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $tgl_lahir = $_POST["tgl_lahir"];
 
-    // Validasi server-side
+    // Validasi dari sisi server
     if (empty($nama) || empty($email) || empty($password) || empty($tgl_lahir)) {
         echo "Semua field harus diisi.";
         exit;
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = "Nama: $nama | Email: $email | Password: $password | Tanggal Lahir: $tgl_lahir\n";
     file_put_contents("data_pendaftar.txt", $data, FILE_APPEND);
 
-    // Simpan juga ke session untuk ringkasan
+    // Simpan dalam array dan ringkasan akan tampil di halaman lain
     session_start();
     $_SESSION["data"] = [
         "nama" => $nama,
